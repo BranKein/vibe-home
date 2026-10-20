@@ -31,12 +31,13 @@ test('head has description, canonical and share tags; optional tags only when se
   assert.match(bare, /<link rel="canonical" href="https:\/\/yeonhyuk\.me\/">/);
   assert.match(bare, /og:image" content="https:\/\/yeonhyuk\.me\/img\/avatar\.jpg"/);
   assert.match(bare, /"@type":"Person"/);
-  assert.doesNotMatch(bare, /site-verification|adsbygoogle/);
+  assert.doesNotMatch(bare, /site-verification|google-adsense-account/);
 
   const full = pageHead(PAGES[1], { siteUrl: SITE, env: { GOOGLE_SITE_VERIFICATION: 'g1', NAVER_SITE_VERIFICATION: 'n1', ADSENSE_CLIENT: 'ca-pub-9' } });
   assert.match(full, /google-site-verification" content="g1"/);
   assert.match(full, /naver-site-verification" content="n1"/);
-  assert.match(full, /adsbygoogle\.js\?client=ca-pub-9"/);
+  assert.match(full, /<meta name="google-adsense-account" content="ca-pub-9">/);
+  assert.doesNotMatch(full, /adsbygoogle/);
   assert.match(full, /canonical" href="https:\/\/yeonhyuk\.me\/now\.html"/);
 });
 

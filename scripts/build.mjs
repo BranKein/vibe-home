@@ -1,4 +1,4 @@
-// Builds dist/ from src/: puts the head tags (search, share card, site verification, AdSense) into each page,
+// Builds dist/ from src/: puts the head tags (search, share card, site and AdSense verification) into each page,
 // fills the project cards from the museum's exhibit list, and writes robots.txt, sitemap.xml and ads.txt.
 //
 // Environment (all optional): SITE_URL, MUSEUM_URL, GOOGLE_SITE_VERIFICATION, NAVER_SITE_VERIFICATION,
@@ -70,7 +70,8 @@ export function pageHead(page, { siteUrl, env = {}, person = false }) {
   if (person) tags.push(jsonLd(siteUrl));
   const client = publisherId(env.ADSENSE_CLIENT);
   if (client) {
-    tags.push(`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${client}" crossorigin="anonymous"></script>`);
+    // Proves the domain to AdSense without loading any ad code; this page has no ad slots.
+    tags.push(`<meta name="google-adsense-account" content="ca-${client}">`);
   }
   return tags.join('\n');
 }

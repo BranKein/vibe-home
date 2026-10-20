@@ -24,7 +24,7 @@ npm run build
 | 변수 | 들어가는 것 |
 |---|---|
 | `GOOGLE_SITE_VERIFICATION`, `NAVER_SITE_VERIFICATION` | 검색엔진 소유 확인 메타 태그 |
-| `ADSENSE_CLIENT` (`ca-pub-…`) | 애드센스 스크립트(광고 칸은 없음, 심사용)와 `ads.txt` |
+| `ADSENSE_CLIENT` (`ca-pub-…`) | 애드센스 소유 확인 메타 태그와 `ads.txt`. 광고 코드는 불러오지 않는다 |
 
 ## 배포
 
