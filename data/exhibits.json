@@ -1,0 +1,90 @@
+[
+  {
+    "id": "warehouse-tycoon",
+    "status": "live",
+    "title": {
+      "ko": "창고 타이쿤",
+      "en": "Warehouse Tycoon"
+    },
+    "blurb": {
+      "ko": "창고를 소재로 한 3D 방치형 타이쿤. 공장을 짓고, 원자재를 들여와 가공하고, 트럭·배·비행기로 내다 판다.",
+      "en": "A 3D idle tycoon about warehouses. Build factories, bring in raw materials, process them and ship the goods out by truck, boat and plane."
+    },
+    "url": "https://warehouse-tycoon.yeonhyuk.me",
+    "repo": "https://github.com/BranKein/vive-warehouse-tycoon",
+    "version": "v1.0.7",
+    "deployed": "2026-10-20",
+    "started": "2026-10-12",
+    "days": 3,
+    "stack": [
+      "TypeScript",
+      "Three.js",
+      "Vite"
+    ],
+    "pcOnly": true,
+    "thumb": "img/exhibits/warehouse-tycoon.jpg",
+    "aspect": 1.3333333333333333,
+    "no": "VM-001"
+  },
+  {
+    "id": "museum",
+    "status": "live",
+    "title": {
+      "ko": "바이브 뮤지엄",
+      "en": "Vive Museum"
+    },
+    "blurb": {
+      "ko": "바이브 코딩으로 만든 것들을 모아 둔 작은 박물관. 지금 보고 있는 이곳이다. 같은 전시품을 핀보드, 3D 전시관, 전시 도록, 야간 개장 네 가지 전시관으로 보여 준다.",
+      "en": "A small museum of things made by vibe coding, the one you are in now. It shows the same exhibits in four halls: a pinboard, a 3D gallery, a catalogue and a night opening."
+    },
+    "url": "https://vive-museum.yeonhyuk.me",
+    "repo": "https://github.com/BranKein/vive-museum",
+    "version": "v0.0.4",
+    "deployed": "2026-10-20",
+    "started": "2026-10-15",
+    "days": 6,
+    "stack": [
+      "JavaScript",
+      "Three.js",
+      "AWS Lambda"
+    ],
+    "pcOnly": false,
+    "thumb": "img/exhibits/museum.jpg",
+    "aspect": 1.3333333333333333,
+    "no": "VM-003"
+  },
+  {
+    "id": "ikeyboard-imouse",
+    "status": "upcoming",
+    "title": {
+      "ko": "iKeyboard·iMouse",
+      "en": "iKeyboard & iMouse"
+    },
+    "blurb": {
+      "ko": "카메라로 빈 책상을 비추고 손을 올려, 키보드를 치거나 마우스를 쥔 듯한 손동작만으로 입력한다.",
+      "en": "Point a camera at an empty desk and type or move the mouse with hand gestures alone, no keyboard or mouse needed."
+    },
+    "noted": "2026-10-16",
+    "stack": [],
+    "pcOnly": false,
+    "aspect": 1.3333333333333333,
+    "no": "VM-004"
+  },
+  {
+    "id": "periodic-coding-problems",
+    "status": "upcoming",
+    "title": {
+      "ko": "주기적 코딩 문제",
+      "en": "Problem of the Week"
+    },
+    "blurb": {
+      "ko": "코딩·SQL 문제를 주기적으로 만들어 쌓고, 구독한 사람에게 새 문제를 메일로 알린다.",
+      "en": "Coding and SQL problems made on a schedule, kept in a searchable list, with an email to subscribers for each new one."
+    },
+    "noted": "2026-10-12",
+    "stack": [],
+    "pcOnly": false,
+    "aspect": 1.3333333333333333,
+    "no": "VM-002"
+  }
+]

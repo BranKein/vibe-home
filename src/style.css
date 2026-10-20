@@ -1,0 +1,75 @@
+/* Pastel bento: the colours come from the profile picture (pink to periwinkle). */
+:root {
+  --pink: #e9b4d0; --lilac: #c6b4d6; --blue: #a5b4d6;
+  --bg1: #fbf3f8; --bg2: #eef1fa;
+  --card: rgba(255, 255, 255, 0.62); --edge: rgba(255, 255, 255, 0.85);
+  --fg: #2d2a3a; --mute: #6f6a86; --accent: #7d61a6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg1: #221b28; --bg2: #191c28;
+    --card: rgba(255, 255, 255, 0.06); --edge: rgba(255, 255, 255, 0.12);
+    --fg: #efeaf6; --mute: #a9a3bd; --accent: #d2b8ee;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: var(--fg);
+  font: 400 15px/1.6 "Pretendard", system-ui, -apple-system, "Apple SD Gothic Neo", sans-serif;
+  background:
+    radial-gradient(60vw 60vw at 0% 0%, color-mix(in srgb, var(--pink) 45%, transparent), transparent 70%),
+    radial-gradient(60vw 60vw at 100% 100%, color-mix(in srgb, var(--blue) 45%, transparent), transparent 70%),
+    linear-gradient(160deg, var(--bg1), var(--bg2));
+  background-attachment: fixed;
+}
+a { color: inherit; }
+.en { color: var(--mute); }
+
+/* --- Bento grid (index) --- */
+.bento { max-width: 880px; margin: 0 auto; padding: 48px 16px; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 150px; gap: 14px; }
+.card {
+  background: var(--card); border: 1px solid var(--edge); border-radius: 26px; padding: 22px;
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 10px 30px -18px rgba(90, 70, 130, 0.35);
+  overflow: hidden; text-decoration: none; position: relative; transition: transform .2s, box-shadow .2s;
+}
+a.card:hover, a.card:focus-visible { transform: translateY(-3px); box-shadow: 0 16px 36px -18px rgba(90, 70, 130, 0.5); }
+.k { display: block; font-size: 13px; color: var(--accent); font-weight: 600; }
+.intro { grid-column: span 2; grid-row: span 2; display: flex; flex-direction: column; justify-content: flex-end; }
+.avatar { width: 72px; height: 72px; border-radius: 50%; margin-bottom: auto; box-shadow: 0 0 0 4px var(--edge); }
+.intro h1 { font-size: 30px; margin: 0; letter-spacing: -0.02em; line-height: 1.25; }
+.intro h1 .en { font-size: 18px; font-weight: 500; }
+.intro p { margin: 8px 0 0; }
+.small { display: flex; flex-direction: column; justify-content: space-between; }
+.small .v { font-weight: 600; font-size: 17px; }
+.small .k { color: var(--mute); font-weight: 400; }
+.gh { background: linear-gradient(140deg, color-mix(in srgb, var(--pink) 55%, var(--card)), var(--card)); }
+.mail { background: linear-gradient(140deg, color-mix(in srgb, var(--blue) 55%, var(--card)), var(--card)); }
+.wide { grid-column: span 2; }
+.wide p { margin: 4px 0 0; }
+.proj { grid-column: span 2; grid-row: span 2; padding: 0; }
+.proj img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj .label { position: absolute; left: 12px; bottom: 12px; right: 12px; background: var(--card); border: 1px solid var(--edge); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-radius: 16px; padding: 10px 14px; }
+.proj .label b { display: block; }
+.proj .label span { font-size: 13px; color: var(--mute); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@media (prefers-color-scheme: dark) { .proj .label { background: rgba(28, 24, 38, 0.82); } }
+@media (prefers-color-scheme: light) { .proj .label { background: rgba(255, 255, 255, 0.86); } }
+.site-foot { grid-column: 1 / -1; text-align: center; font-size: 13px; color: var(--mute); padding-top: 8px; }
+
+/* --- Text pages (now, privacy) --- */
+.page { max-width: 680px; margin: 0 auto; padding: 48px 16px; }
+.page article { background: var(--card); border: 1px solid var(--edge); border-radius: 26px; padding: 28px 26px; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.page h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.02em; }
+.page h2 { margin: 28px 0 6px; font-size: 17px; }
+.page .back { display: inline-block; margin-bottom: 16px; color: var(--accent); text-decoration: none; }
+.page .date { color: var(--mute); font-size: 13px; }
+.page ul { padding-left: 20px; }
+.page .site-foot { margin-top: 24px; }
+
+@media (max-width: 640px) {
+  .bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(130px, auto); padding: 24px 16px; }
+  .intro, .proj, .wide { grid-column: span 2; }
+  .intro { grid-row: auto; }
+  .intro .avatar { margin-bottom: 24px; }
+  .proj { grid-row: auto; height: 280px; }
+}
