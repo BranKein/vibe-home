@@ -98,9 +98,12 @@ export function jsonLd(siteUrl) {
   return '<script type="application/ld+json">' + JSON.stringify(data).replace(/</g, '\\u003c') + '</script>';
 }
 
+/** The live exhibits to show here: everything except this page itself. */
+const otherLive = (exhibits) => exhibits.filter((e) => e.status === 'live' && e.id !== 'home');
+
 /** Big cards for the live exhibits, linking to each site, with the museum's thumbnail. */
 export function projectCards(exhibits, museumUrl) {
-  return exhibits.filter((e) => e.status === 'live').map((e) => {
+  return otherLive(exhibits).map((e) => {
     const thumb = e.thumb ? `<img src="${esc(museumUrl + '/' + e.thumb)}" alt="" loading="lazy">` : '';
     return `  <a class="card proj" href="${esc(e.url)}">${thumb}<div class="label"><b>${esc(e.title.ko)} · ${esc(e.title.en)}</b>` +
       `<span>${esc(e.blurb.ko)}</span></div></a>`;
@@ -167,7 +170,7 @@ export async function build({ env = process.env, exhibits } = {}) {
   await writeFile(join(DIST, 'sitemap.xml'), sitemapXml(siteUrl, new Date().toISOString().slice(0, 10)));
   const ads = adsTxt(env.ADSENSE_CLIENT);
   if (ads) await writeFile(join(DIST, 'ads.txt'), ads);
-  return { pages: PAGES.length, projects: list.filter((e) => e.status === 'live').length, ads: Boolean(ads) };
+  return { pages: PAGES.length, projects: otherLive(list).length, ads: Boolean(ads) };
 }
 
 if (import.meta.url === 'file://' + process.argv[1]) {

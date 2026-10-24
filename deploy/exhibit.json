@@ -1,0 +1,11 @@
+{
+  "title": { "ko": "소개 페이지", "en": "Home" },
+  "blurb": {
+    "ko": "yeonhyuk.me 첫 화면. 만든 사람과 프로젝트들을 소개하고, 개인정보처리방침과 연락처를 둔다.",
+    "en": "The front page of yeonhyuk.me, introducing the maker and the projects, with the privacy policy and contact."
+  },
+  "stack": ["HTML", "CSS", "Node.js"],
+  "thumbnail": "deploy/thumbnail.jpg",
+  "aspect": "4:3",
+  "pcOnly": false
+}

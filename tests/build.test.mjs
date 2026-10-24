@@ -10,6 +10,7 @@ const DIST = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist');
 const SITE = 'https://yeonhyuk.me';
 const EXHIBITS = [
   { id: 'game', status: 'live', title: { ko: '게임', en: 'Game' }, blurb: { ko: '설명 <b>', en: 'About' }, url: 'https://game.yeonhyuk.me', thumb: 'img/exhibits/game.jpg' },
+  { id: 'home', status: 'live', title: { ko: '소개 페이지', en: 'Home' }, blurb: { ko: '여기', en: 'Here' }, url: 'https://yeonhyuk.me' },
   { id: 'idea', status: 'upcoming', title: { ko: '아이디어', en: 'Idea' }, blurb: { ko: '곧', en: 'Soon' } },
 ];
 
@@ -47,6 +48,7 @@ test('project cards show live exhibits only, escaped, with the museum thumbnail'
   assert.match(html, /src="https:\/\/museum\.example\/img\/exhibits\/game\.jpg"/);
   assert.match(html, /설명 &lt;b&gt;/);
   assert.doesNotMatch(html, /아이디어/);
+  assert.doesNotMatch(html, /소개 페이지/);
   assert.equal(museumNote(EXHIBITS), '준비 중 1개 · 1 coming');
 });
 
