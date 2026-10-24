@@ -5,7 +5,7 @@
 ## 구조
 
 - `src/`: 페이지 원본. `index.html`(벤토 카드), `now.html`(요즘 하는 일), `privacy.html`(개인정보처리방침), `style.css`, `img/avatar.jpg`.
-- `scripts/build.mjs`: `dist/`를 만든다. 박물관의 전시 목록(`https://vive-museum.yeonhyuk.me/data/exhibits.js`)을 읽어 운영 중인 프로젝트 카드를 채우고, 읽지 못하면 지난번 사본 `data/exhibits.json`을 쓴다.
+- `scripts/build.mjs`: `dist/`를 만든다. 박물관의 전시 목록(`https://vibe-museum.yeonhyuk.me/data/exhibits.js`)을 읽어 운영 중인 프로젝트 카드를 채우고, 읽지 못하면 지난번 사본 `data/exhibits.json`을 쓴다.
 - `deploy/site.json`: 인프라에 바라는 값. `subdomain: "@"`는 `yeonhyuk.me` 자체를 뜻한다(vibe-infra `sites/home`).
 
 ## 명령

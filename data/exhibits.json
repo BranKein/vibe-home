@@ -12,8 +12,8 @@
     },
     "url": "https://warehouse-tycoon.yeonhyuk.me",
     "repo": "https://github.com/BranKein/vibe-warehouse-tycoon",
-    "version": "v1.0.7",
-    "deployed": "2026-10-20",
+    "version": "v1.1.2",
+    "deployed": "2026-10-24",
     "started": "2026-10-12",
     "days": 3,
     "stack": [
@@ -37,12 +37,12 @@
       "ko": "바이브 코딩으로 만든 것들을 모아 둔 작은 박물관. 지금 보고 있는 이곳이다. 같은 전시품을 핀보드, 3D 전시관, 전시 도록, 야간 개장 네 가지 전시관으로 보여 준다.",
       "en": "A small museum of things made by vibe coding, the one you are in now. It shows the same exhibits in four halls: a pinboard, a 3D gallery, a catalogue and a night opening."
     },
-    "url": "https://vive-museum.yeonhyuk.me",
+    "url": "https://vibe-museum.yeonhyuk.me",
     "repo": "https://github.com/BranKein/vibe-museum",
-    "version": "v0.0.4",
-    "deployed": "2026-10-20",
+    "version": "v0.0.5",
+    "deployed": "2026-10-24",
     "started": "2026-10-15",
-    "days": 6,
+    "days": 10,
     "stack": [
       "JavaScript",
       "Three.js",
@@ -52,6 +52,23 @@
     "thumb": "img/exhibits/museum.jpg",
     "aspect": 1.3333333333333333,
     "no": "VM-003"
+  },
+  {
+    "id": "home-site",
+    "status": "upcoming",
+    "title": {
+      "ko": "소개 페이지",
+      "en": "Home"
+    },
+    "blurb": {
+      "ko": "yeonhyuk.me 첫 화면. 만든 사람과 프로젝트들을 소개하고, 개인정보처리방침과 연락처를 둔다.",
+      "en": "The front page of yeonhyuk.me, introducing the maker and the projects, with the privacy policy and contact."
+    },
+    "noted": "2026-10-20",
+    "stack": [],
+    "pcOnly": false,
+    "aspect": 1.3333333333333333,
+    "no": "VM-005"
   },
   {
     "id": "ikeyboard-imouse",

@@ -149,7 +149,7 @@ export async function loadExhibits(museumUrl) {
 
 export async function build({ env = process.env, exhibits } = {}) {
   const siteUrl = (env.SITE_URL || 'https://yeonhyuk.me').replace(/\/+$/, '');
-  const museumUrl = (env.MUSEUM_URL || 'https://vive-museum.yeonhyuk.me').replace(/\/+$/, '');
+  const museumUrl = (env.MUSEUM_URL || 'https://vibe-museum.yeonhyuk.me').replace(/\/+$/, '');
   const list = exhibits || await loadExhibits(museumUrl);
 
   await rm(DIST, { recursive: true, force: true });
