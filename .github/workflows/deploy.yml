@@ -1,4 +1,4 @@
-# A tag v* (e.g. v0.0.1) tests and builds the home page (it reads the museum's exhibit list), brings its hosting up to date in BranKein/vive-infra,
+# A tag v* (e.g. v0.0.1) tests and builds the home page (it reads the museum's exhibit list), brings its hosting up to date in BranKein/vibe-infra,
 # then uploads the build to S3 and refreshes CloudFront.
 name: deploy
 
@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 env:
-  INFRA_REPO: BranKein/vive-infra
+  INFRA_REPO: BranKein/vibe-infra
   SITE: home
 
 jobs:

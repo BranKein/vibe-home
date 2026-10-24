@@ -11,7 +11,7 @@
       "en": "A 3D idle tycoon about warehouses. Build factories, bring in raw materials, process them and ship the goods out by truck, boat and plane."
     },
     "url": "https://warehouse-tycoon.yeonhyuk.me",
-    "repo": "https://github.com/BranKein/vive-warehouse-tycoon",
+    "repo": "https://github.com/BranKein/vibe-warehouse-tycoon",
     "version": "v1.0.7",
     "deployed": "2026-10-20",
     "started": "2026-10-12",
@@ -38,7 +38,7 @@
       "en": "A small museum of things made by vibe coding, the one you are in now. It shows the same exhibits in four halls: a pinboard, a 3D gallery, a catalogue and a night opening."
     },
     "url": "https://vive-museum.yeonhyuk.me",
-    "repo": "https://github.com/BranKein/vive-museum",
+    "repo": "https://github.com/BranKein/vibe-museum",
     "version": "v0.0.4",
     "deployed": "2026-10-20",
     "started": "2026-10-15",

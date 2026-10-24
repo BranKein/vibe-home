@@ -1,4 +1,4 @@
-# vive-home 계획
+# vibe-home 계획
 
 ## 목표
 
@@ -12,9 +12,9 @@
 - 프로젝트 카드는 박물관의 전시 목록에서 빌드 때 만든다. 목록 원천을 한곳(박물관)에 두기 위해서다. 못 읽으면 저장된 사본을 쓴다. (에이전트 제안)
 - 의존성 없는 Node 스크립트로 빌드한다. 페이지 세 개라 프레임워크가 필요 없다. (에이전트 제안)
 - 이 사이트에는 광고를 두지 않는다. 애드센스 소유 확인은 광고 코드 대신 `google-adsense-account` 메타 태그로 하고, `ads.txt`는 하위 도메인 광고까지 인증하므로 여기 둔다(2026-10-20 사용자와 정함).
-- 인프라: vive-infra `modules/static-site`에 `subdomain: "@"`(루트 도메인) 지원을 더하고 `sites/home`을 만들었다(vive-infra#5).
+- 인프라: vibe-infra `modules/static-site`에 `subdomain: "@"`(루트 도메인) 지원을 더하고 `sites/home`을 만들었다(vibe-infra#5).
 
 ## 남은 일
 
-- 사용자: vive-infra#5 병합, 배포용 액세스 키와 Secrets·Variables 입력, 애드센스 가입 후 `ADSENSE_CLIENT` 전달, 첫 태그 push.
+- 사용자: vibe-infra#5 병합, 배포용 액세스 키와 Secrets·Variables 입력, 애드센스 가입 후 `ADSENSE_CLIENT` 전달, 첫 태그 push.
 - 박물관·창고 타이쿤 광고 칸은 각 저장소에서 따로 한다.
